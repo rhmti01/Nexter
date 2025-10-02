@@ -1,5 +1,47 @@
-.sidebar{
-    background-color: $color-primary;
-    grid-column: sidebar-start / sidebar-end;
-    grid-row:  1 / -1;
+.sidebar {
+  background-color: $color-primary;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1;
+
+  display: flex;
+  justify-content: center;
+}
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem;
+  margin-top: 4rem;
+
+  &::before,
+  &::after {
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+    display: block;
+    content: "";
+  }
+
+  &::before {
+    transform: translateY(-1.5rem);
+    -webkit-transform: translateY(-1.5rem);
+    -moz-transform: translateY(-1.5rem);
+    -ms-transform: translateY(-1.5rem);
+    -o-transform: translateY(-1.5rem);
+  }
+
+  &::after {
+    transform: translateY(1.3rem);
+    -webkit-transform: translateY(1.3rem);
+    -moz-transform: translateY(1.3rem);
+    -ms-transform: translateY(1.3rem);
+    -o-transform: translateY(1.3rem);
+}
 }
