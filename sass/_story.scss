@@ -1,45 +1,69 @@
 .story {
-    &__pictures{
-        background-color:$color-primary ;
-        grid-column: full-start / col-end 4;
-    
-        display: grid;
-        grid-template-columns: repeat(6 , 1fr);
-        grid-template-rows: repeat(6 , 1fr);
-        align-items: center;
-        background-image: linear-gradient( rgba($color-primary , 0.5 ), rgba($color-primary , 0.5 )), url(../img/back.jpg);
-        background-size: cover;
-    }
+  &__pictures {
+    background-color: $color-primary;
+    grid-column: full-start / col-end 4;
 
-    &__img--1 {
-        width: 100%;
-        grid-column: 2 / 6;
-        grid-row: 2 / 6;
-        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.15);
-    }
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    background-image: linear-gradient(
+        rgba($color-primary, 0.5),
+        rgba($color-primary, 0.5)
+      ),
+      url(../img/back.jpg);
+    background-size: cover;
 
-    &__img--2 {
-        width: 100%;
-        grid-column: 4 / 7;
-        grid-row: 4 / 6;
-        width: 115%;
-        z-index: 2;
-        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.15);
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / -1;
+      padding: 6rem;
     }
+  }
 
-    &__content{
-         background-color:$color-grey-light-1 ;
-        grid-column: col-start 5 / full-end;
+  &__img--1 {
+    width: 100%;
+    grid-column: 2 / 6;
+    grid-row: 2 / 6;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.15);
 
-        padding: 6rem 8vw;
-        display: grid;
-        align-content: center;
-        justify-items:start;
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / 5;
+      grid-row: 1 / -1;
     }
+  }
 
-    &__text {
-        font-size: 1.5rem;
-        font-style: italic;
-        margin-bottom: 4rem;
+  &__img--2 {
+    width: 100%;
+    grid-column: 4 / 7;
+    grid-row: 4 / 6;
+    width: 115%;
+    z-index: 2;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.15);
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 1 / -1;
+      width: 100%;
     }
+  }
+
+  &__content {
+    background-color: $color-grey-light-1;
+    grid-column: col-start 5 / full-end;
+
+    padding: 6rem 8vw;
+    display: grid;
+    align-content: center;
+    justify-items: start;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / -1;
+      grid-row: 5 / 6;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
+  }
 }
